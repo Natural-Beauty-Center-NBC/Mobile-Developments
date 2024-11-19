@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">NBC Mobile</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="room_management">Check Room</string>
 </resources>

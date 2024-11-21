@@ -1,4 +1,4 @@
-package id.project.nbcmobile.room_management
+package id.project.nbcmobile.view.room_management
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import id.project.nbcmobile.R
 import id.project.nbcmobile.databinding.FragmentHomeBinding
 import id.project.nbcmobile.databinding.FragmentRoomManagementBinding
-import id.project.nbcmobile.home.HomeViewModel
+import id.project.nbcmobile.view.home.HomeViewModel
 
 class RoomManagementFragment : Fragment() {
 

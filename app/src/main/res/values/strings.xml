@@ -4,4 +4,37 @@
     <string name="history">History</string>
     <string name="profile">Profile</string>
     <string name="room_management">Check Room</string>
+
+    <string name="hi_welcome_back">Hi, Welcome Back!</string>
+    <string name="login_sub_message">Please Enter your registered account</string>
+    <string name="login">Login</string>
+    <string name="not_registered_yet">Not registered yet?</string>
+    <string name="create_account_customer_only">Create Account (Customer Only)</string>
+
+    <string name="email">Email</string>
+    <string name="email_error">Email not found!</string>
+    <string name="email_hint">johndoe@gmail.com</string>
+
+    <string name="password">Password</string>
+    <string name="password_error">Password incorrect!</string>
+    <string name="password_hint">john1234</string>
+
+    <string name="error_input_message">Data tidak boleh kosong!</string>
+    <string name="name_hint">johndoe</string>
+    <string name="date_hint">2024–12–10</string>
+    <string name="address_hint">Jl. Babarsari No.41, Yogyakarta</string>
+    <string name="allergy_hint">Alergi Seafood</string>
+
+    <string name="account_registration">Account Registration</string>
+    <string name="register_sub_message">Register</string>
+    <string name="name">Nama</string>
+    <string name="date_of_birth">Tanggal Lahir</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="male">Pria</string>
+    <string name="female">Wanita</string>
+    <string name="address">Alamat</string>
+    <string name="num_phone">Nomor Telepon</string>
+    <string name="allergy">Alergi (Optional)</string>
+    <string name="already_has_account">Already has account?</string>
+    <string name="login_to_your_account">Login to your account!</string>
 </resources>

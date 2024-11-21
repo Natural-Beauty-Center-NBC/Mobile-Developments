@@ -1,12 +1,14 @@
-package id.project.nbcmobile.room_management
+package id.project.nbcmobile.view.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import id.project.nbcmobile.data.Repository
 
-class RoomManagementViewModel : ViewModel() {
+class HomeViewModel(private val repository: Repository) : ViewModel() {
+
     private val _text = MutableLiveData<String>().apply {
-        value = "Room Management"
+        value = "This is home Fragment"
     }
     val text: LiveData<String> = _text
 }

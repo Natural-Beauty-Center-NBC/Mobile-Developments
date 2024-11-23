@@ -54,7 +54,7 @@
         android:layout_marginStart="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
-        app:srcCompat="@drawable/logo_nbc" />
+        app:srcCompat="@drawable/nbc_logo_full" />
 
     <TextView
         android:id="@+id/title_login"
@@ -117,7 +117,7 @@
         app:startIconDrawable="@drawable/ic_email"
         tools:alpha="100">
 
-        <id.project.nbcmobile.view.components.EmailCustomView
+        <id.project.nbcmobile.view.components.customView.EmailCustomView
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
         app:startIconDrawable="@drawable/ic_password"
         tools:alpha="100">
 
-        <id.project.nbcmobile.view.components.PasswordCustomView
+        <id.project.nbcmobile.view.components.customView.PasswordCustomView
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

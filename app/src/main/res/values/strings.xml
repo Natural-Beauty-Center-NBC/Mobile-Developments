@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">NBC Mobile</string>
+    <string name="app_name">Natural Beauty Center</string>
+    <string name="app_motto">Beauty Powered by Nature, Perfected by Technology</string>
     <string name="home">Home</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
-    <string name="room_management">Check Room</string>
+    <string name="room_manage">Room Manage</string>
+
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Konfirmasi</string>
+    <string name="logout_confirmation_message">Apakah anda yakin ingin logout?</string>
 
     <string name="hi_welcome_back">Hi, Welcome Back!</string>
     <string name="login_sub_message">Please Enter your registered account</string>

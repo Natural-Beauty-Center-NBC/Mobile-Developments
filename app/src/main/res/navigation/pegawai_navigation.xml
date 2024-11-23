@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pegawai_navigation"
+    app:startDestination="@+id/navigation_room_management">
+
+    <fragment
+        android:id="@+id/navigation_room_management"
+        android:name="id.project.nbcmobile.view.pegawai.room_management.RoomManagementFragment"
+        android:label="@string/room_manage"
+        tools:layout="@layout/fragment_room_management">
+        <argument
+            android:name="room-manage-id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile_pegawai"
+        android:name="id.project.nbcmobile.view.pegawai.profile.PegawaiProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile_pegawai">
+        <argument
+            android:name="pegawai-profile-id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

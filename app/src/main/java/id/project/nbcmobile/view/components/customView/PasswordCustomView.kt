@@ -1,4 +1,4 @@
-package id.project.nbcmobile.view.components
+package id.project.nbcmobile.view.components.customView
 
 import android.content.Context
 import android.graphics.Canvas

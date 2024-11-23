@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import id.project.nbcmobile.data.Repository
+import id.project.nbcmobile.data.repository.Repository
 import id.project.nbcmobile.data.model.UserModel
 import id.project.nbcmobile.data.source.remote.response.ErrorResponse
 import id.project.nbcmobile.data.source.remote.response.LoginResponse
@@ -41,6 +41,7 @@ class AuthenticationViewModel(private val repository: Repository) : ViewModel() 
                 _loginResponse.value = response
                 saveSession(
                     user = UserModel(
+                        id = if (response.user != null) response.user.idCustomer else response.pegawai!!.id.toString(),
                         name = if (response.user != null) response.user.nama else response.pegawai!!.nama,
                         email = if (response.user != null) response.user.email else response.pegawai!!.email,
                         type = response.userType,

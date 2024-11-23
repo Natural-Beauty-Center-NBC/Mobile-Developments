@@ -1,8 +1,9 @@
-package id.project.nbcmobile.data
+package id.project.nbcmobile.data.repository
 
 import id.project.nbcmobile.data.model.UserModel
 import id.project.nbcmobile.data.preference.UserPreference
 import id.project.nbcmobile.data.source.remote.ApiService
+import id.project.nbcmobile.data.source.remote.response.GetUserDataResponse
 import id.project.nbcmobile.data.source.remote.response.LoginResponse
 import id.project.nbcmobile.data.source.remote.response.RegisterResponse
 import kotlinx.coroutines.flow.Flow
@@ -50,6 +51,14 @@ class Repository(
 
     suspend fun login(email: String, password: String): LoginResponse {
         return apiService.login(email = email, password = password)
+    }
+
+    suspend fun getCustomerData(id: String): GetUserDataResponse {
+        return apiService.getCustomerData(id)
+    }
+
+    suspend fun getPegawaiData(id: Int): GetUserDataResponse {
+        return apiService.getPegawaiData(id)
     }
 
     // TODO - Add the rest of API Services here :

@@ -1,10 +1,13 @@
 package id.project.nbcmobile.data.source.remote
 
+import id.project.nbcmobile.data.source.remote.response.GetUserDataResponse
 import id.project.nbcmobile.data.source.remote.response.LoginResponse
 import id.project.nbcmobile.data.source.remote.response.RegisterResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface ApiService {
     @FormUrlEncoded
@@ -28,5 +31,16 @@ interface ApiService {
         @Field("password") password: String
     ) : LoginResponse
 
+    @GET("get-customer/{id}")
+    suspend fun getCustomerData(
+        @Path("id") id: String
+    ) : GetUserDataResponse
+
+    @GET("get-pegawai/{id}")
+    suspend fun getPegawaiData(
+        @Path("id") id: Int
+    ) : GetUserDataResponse
+
     // TODO - Add the rest of API Endpoints here :
+
 }

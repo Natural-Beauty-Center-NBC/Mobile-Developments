@@ -1,9 +1,9 @@
-package id.project.nbcmobile.view.history
+package id.project.nbcmobile.view.customer.history
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import id.project.nbcmobile.data.Repository
+import id.project.nbcmobile.data.repository.Repository
 
 class HistoryViewModel(private val repository: Repository) : ViewModel() {
 

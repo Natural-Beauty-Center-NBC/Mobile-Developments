@@ -7,14 +7,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import id.project.nbcmobile.R
 import id.project.nbcmobile.databinding.ActivityRegisterBinding
-import id.project.nbcmobile.view.components.AlertDialogCustom
+import id.project.nbcmobile.view.components.customView.AlertDialogCustom
 import id.project.nbcmobile.view.components.utils.ViewModelFactory
 import java.util.Calendar
 

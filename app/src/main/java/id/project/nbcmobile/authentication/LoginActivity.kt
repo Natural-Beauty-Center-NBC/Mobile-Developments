@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import id.project.nbcmobile.view.customer.main.MainActivity
 import id.project.nbcmobile.R
 import id.project.nbcmobile.databinding.ActivityLoginBinding
-import id.project.nbcmobile.view.components.AlertDialogCustom
+import id.project.nbcmobile.view.pegawai.main.PegawaiActivity
+import id.project.nbcmobile.view.components.customView.AlertDialogCustom
 import id.project.nbcmobile.view.components.utils.ViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
@@ -36,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
                         message = "${response.user.nama} is login as ${response.userType}",
                         hasNegativeBtn = false,
                         onPositiveButtonClick = {
-                            // TODO -> Move to dedicated customer's UI
+                            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         },
                         onNegativeButtonClick = { /* Do Nothing */ }
                     )
@@ -47,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                         message = "${response.pegawai?.nama} is login as ${response.userType}",
                         hasNegativeBtn = false,
                         onPositiveButtonClick = {
-                            // TODO -> Move to dedicated Staff's UI
+                            startActivity(Intent(this@LoginActivity, PegawaiActivity::class.java))
                         },
                         onNegativeButtonClick = { /* Do Nothing */ }
                     )

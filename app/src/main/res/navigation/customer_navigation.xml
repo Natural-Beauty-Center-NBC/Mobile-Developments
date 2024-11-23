@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="id.project.nbcmobile.view.customer.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="home-id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="id.project.nbcmobile.view.customer.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history">
+        <argument
+            android:name="history-id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile_customer"
+        android:name="id.project.nbcmobile.view.customer.profile.CustomerProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile_customer">
+        <argument
+            android:name="customer-profile-id"
+            app:argType="string" />
+    </fragment>
+</navigation>

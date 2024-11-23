@@ -1,14 +1,14 @@
-package id.project.nbcmobile.view.profile
+package id.project.nbcmobile.view.customer.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import id.project.nbcmobile.data.Repository
+import id.project.nbcmobile.data.repository.Repository
 
-class ProfileViewModel(private val repository: Repository) : ViewModel() {
+class HomeViewModel(private val repository: Repository) : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is profile Fragment"
+        value = "This is home Fragment"
     }
     val text: LiveData<String> = _text
 }

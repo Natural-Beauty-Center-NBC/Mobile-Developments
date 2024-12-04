@@ -2,7 +2,7 @@
     <string name="app_name">Natural Beauty Center</string>
     <string name="app_motto">Beauty Powered by Nature, Perfected by Technology</string>
     <string name="home">Home</string>
-    <string name="history">History</string>
+    <string name="history">Riwayat</string>
     <string name="profile">Profile</string>
     <string name="room_manage">Room Manage</string>
 
@@ -42,4 +42,7 @@
     <string name="allergy">Alergi (Optional)</string>
     <string name="already_has_account">Already has account?</string>
     <string name="login_to_your_account">Login to your account!</string>
+    <string name="riwayat_transaksi">Riwayat Transaksi</string>
+
+    <string name="jadwal_dokter">Jadwal Layanan Dokter - %1$s</string>
 </resources>

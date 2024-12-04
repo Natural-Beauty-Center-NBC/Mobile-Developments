@@ -25,7 +25,7 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.37"
+        app:layout_constraintGuide_percent="0.325"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -182,6 +182,17 @@
         app:layout_constraintTop_toBottomOf="@+id/password_edit_textLayout"
         tools:alpha="100" />
 
+    <Button
+        android:id="@+id/continue_as_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/pink"
+        app:layout_constraintStart_toStartOf="@id/login_button"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
+        app:layout_constraintEnd_toEndOf="@id/login_button"
+        android:text="Continue as a Guest" />
+
     <LinearLayout
         android:id="@+id/registration_wrapper"
         android:layout_width="wrap_content"
@@ -190,7 +201,7 @@
         android:alpha="0"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@id/login_button"
-        app:layout_constraintTop_toBottomOf="@id/login_button"
+        app:layout_constraintTop_toBottomOf="@id/continue_as_guest"
         tools:alpha="100">
 
         <TextView

@@ -2,6 +2,7 @@ package id.project.nbcmobile.view.pegawai.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -40,6 +41,10 @@ class PegawaiActivity : AppCompatActivity() {
                 }
 
                 navController.setGraph(navGraph, bundle)
+
+                // Set the Initial Bundle's value to Room Manage screen (note: It'll error if get removed)
+                navController.navigate(R.id.navigation_room_management, bundle)
+
                 binding.navView.setOnItemSelectedListener { item ->
                     when (item.itemId) {
                         R.id.navigation_room_management -> {

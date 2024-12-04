@@ -1,93 +1,88 @@
-package id.project.nbcmobile.view.customer.home
+package id.project.nbcmobile.view.guest
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.project.nbcmobile.R
+import id.project.nbcmobile.authentication.LoginActivity
 import id.project.nbcmobile.data.source.remote.response.DataItem
 import id.project.nbcmobile.data.source.remote.response.PerawatansItem
 import id.project.nbcmobile.data.source.remote.response.ProduksItem
-import id.project.nbcmobile.databinding.FragmentHomeBinding
+import id.project.nbcmobile.databinding.ActivityHomeGuestBinding
 import id.project.nbcmobile.view.components.adapter.guest.JadwalDokterGuestAdapter
 import id.project.nbcmobile.view.components.adapter.guest.ListPerawatanGuestAdapter
 import id.project.nbcmobile.view.components.adapter.guest.ListProdukGuestAdapter
 import id.project.nbcmobile.view.components.utils.ViewModelFactory
 
-class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
-    private val viewModel by viewModels<HomeViewModel> {
-        ViewModelFactory.getInstance(requireActivity())
+class HomeGuestActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomeGuestBinding
+    private val viewModel by viewModels<HomeGuestViewModel> {
+        ViewModelFactory.getInstance(this@HomeGuestActivity)
     }
 
     private lateinit var rvProduk: RecyclerView
     private lateinit var rvPerawatan: RecyclerView
     private lateinit var rvDokter: RecyclerView
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityHomeGuestBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         viewModel.getListProduk()
         viewModel.getListPerawatan()
         viewModel.getJadwalDokter()
 
         binding.apply {
-            rvProduk = rvProdukHome
-            rvProduk.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            rvProduk = rvProdukGuest
+            rvProduk.layoutManager =
+                LinearLayoutManager(this@HomeGuestActivity, LinearLayoutManager.HORIZONTAL, false)
 
-            rvPerawatan = rvPerawatanHome
-            rvPerawatan.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            rvPerawatan = rvPerawatanGuest
+            rvPerawatan.layoutManager =
+                LinearLayoutManager(this@HomeGuestActivity, LinearLayoutManager.HORIZONTAL, false)
 
-            rvDokter = rvDokterHome
-            rvDokter.layoutManager = LinearLayoutManager(requireActivity())
+            rvDokter = rvDokterGuest
+            rvDokter.layoutManager = LinearLayoutManager(this@HomeGuestActivity)
         }
 
         setupAction()
         setupView()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
     private fun setupView() {
-        viewModel.isLoading.observe(viewLifecycleOwner) {
+        viewModel.isLoading.observe(this@HomeGuestActivity) {
             showLoading(it)
         }
 
-        viewModel.getListProduk.observe(viewLifecycleOwner) { response ->
+        viewModel.getListProduk.observe(this@HomeGuestActivity) { response ->
             setupListProduk(response.produks.take(5))
         }
 
-        viewModel.getListPerawatan.observe(viewLifecycleOwner) { response ->
+        viewModel.getListPerawatan.observe(this@HomeGuestActivity) { response ->
             setupListPerawatan(response.perawatans.take(3))
         }
 
-        viewModel.getJadwalDokter.observe(viewLifecycleOwner) { response ->
+        viewModel.getJadwalDokter.observe(this@HomeGuestActivity) { response ->
             setupJadwalDokter(response.data[0])
         }
     }
 
     private fun setupAction() {
         binding.apply {
+            loginGuestButton.setOnClickListener {
+                startActivity(Intent(this@HomeGuestActivity, LoginActivity::class.java))
+                finish()
+            }
+
             seeAllProduk.setOnClickListener {
                 Toast.makeText(
-                    requireActivity(),
+                    this@HomeGuestActivity,
                     "Coming Soon! Stay Tuned!",
                     Toast.LENGTH_SHORT
                 ).show()
@@ -95,7 +90,7 @@ class HomeFragment : Fragment() {
 
             seeAllPerawatan.setOnClickListener {
                 Toast.makeText(
-                    requireActivity(),
+                    this@HomeGuestActivity,
                     "Coming Soon! Stay Tuned!",
                     Toast.LENGTH_SHORT
                 ).show()
@@ -103,7 +98,7 @@ class HomeFragment : Fragment() {
 
             seeAllDokter.setOnClickListener {
                 Toast.makeText(
-                    requireActivity(),
+                    this@HomeGuestActivity,
                     "Coming Soon! Stay Tuned!",
                     Toast.LENGTH_SHORT
                 ).show()

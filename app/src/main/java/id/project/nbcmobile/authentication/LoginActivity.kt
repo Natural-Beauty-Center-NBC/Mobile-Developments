@@ -13,6 +13,7 @@ import id.project.nbcmobile.databinding.ActivityLoginBinding
 import id.project.nbcmobile.view.pegawai.main.PegawaiActivity
 import id.project.nbcmobile.view.components.customView.AlertDialogCustom
 import id.project.nbcmobile.view.components.utils.ViewModelFactory
+import id.project.nbcmobile.view.guest.HomeGuestActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -95,6 +96,11 @@ class LoginActivity : AppCompatActivity() {
                 } else {
                     viewModel.login(email = email, password = password)
                 }
+            }
+
+            continueAsGuest.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, HomeGuestActivity::class.java))
+                finish()
             }
 
             registerButton.setOnClickListener {

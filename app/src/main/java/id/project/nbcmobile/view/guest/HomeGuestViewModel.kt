@@ -1,4 +1,4 @@
-package id.project.nbcmobile.view.customer.home
+package id.project.nbcmobile.view.guest
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -12,7 +12,7 @@ import id.project.nbcmobile.data.source.remote.response.ListProdukResponse
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
-class HomeViewModel(private val repository: Repository) : ViewModel() {
+class HomeGuestViewModel(private val repository: Repository) : ViewModel() {
     private val _getListProduk = MutableLiveData<ListProdukResponse>()
     val getListProduk: LiveData<ListProdukResponse> = _getListProduk
 
@@ -68,6 +68,6 @@ class HomeViewModel(private val repository: Repository) : ViewModel() {
     }
 
     companion object {
-        private const val TAG = "HomeMainViewModel"
+        private const val TAG = "HomeGuestViewModel"
     }
 }

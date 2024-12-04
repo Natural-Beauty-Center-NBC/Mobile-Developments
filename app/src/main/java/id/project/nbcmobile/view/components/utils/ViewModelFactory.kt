@@ -11,6 +11,7 @@ import id.project.nbcmobile.view.customer.history.HistoryViewModel
 import id.project.nbcmobile.view.customer.home.HomeViewModel
 import id.project.nbcmobile.view.customer.main.MainViewModel
 import id.project.nbcmobile.view.customer.profile.CustomerProfileViewModel
+import id.project.nbcmobile.view.guest.HomeGuestViewModel
 import id.project.nbcmobile.view.pegawai.main.PegawaiViewModel
 import id.project.nbcmobile.view.pegawai.profile.PegawaiProfileViewModel
 import id.project.nbcmobile.view.pegawai.room_management.RoomManagementViewModel
@@ -26,6 +27,10 @@ class ViewModelFactory(private val repository: Repository) :
 
             modelClass.isAssignableFrom(AuthenticationViewModel::class.java) -> {
                 AuthenticationViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(HomeGuestViewModel::class.java) -> {
+                HomeGuestViewModel(repository) as T
             }
 
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {

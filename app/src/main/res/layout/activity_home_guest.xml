@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="18dp"
-    tools:context=".view.customer.home.HomeFragment">
+    android:paddingHorizontal="18dp"
+    android:paddingVertical="12dp"
+    tools:context=".view.guest.HomeGuestActivity">
 
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -20,25 +22,42 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/title_screen"
+    <LinearLayout
+        android:id="@+id/header_guest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:textColor="@color/pink"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="start"
+            android:text="Hi, Guest!"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/login_guest_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Login"
+            android:textSize="12sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/header_produk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_screen">
+        app:layout_constraintTop_toBottomOf="@id/header_guest">
 
         <TextView
             android:id="@+id/title_produk"
@@ -60,7 +79,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_produk_home"
+        android:id="@+id/rv_produk_guest"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginTop="4dp"
@@ -74,7 +93,7 @@
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_produk_home">
+        app:layout_constraintTop_toBottomOf="@id/rv_produk_guest">
 
         <TextView
             android:id="@+id/title_perawatan"
@@ -96,7 +115,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_perawatan_home"
+        android:id="@+id/rv_perawatan_guest"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginTop="4dp"
@@ -110,7 +129,7 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_perawatan_home">
+        app:layout_constraintTop_toBottomOf="@id/rv_perawatan_guest">
 
         <TextView
             android:id="@+id/title_dokter"
@@ -132,7 +151,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_dokter_home"
+        android:id="@+id/rv_dokter_guest"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"

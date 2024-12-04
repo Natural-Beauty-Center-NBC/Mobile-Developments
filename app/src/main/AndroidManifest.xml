@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".view.customer.history.DetailTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.guest.HomeGuestActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.components.splash.SplashActivity"
             android:exported="true">
             <intent-filter>

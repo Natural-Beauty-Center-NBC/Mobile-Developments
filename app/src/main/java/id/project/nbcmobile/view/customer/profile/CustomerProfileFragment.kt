@@ -1,15 +1,20 @@
 package id.project.nbcmobile.view.customer.profile
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import id.project.nbcmobile.R
 import id.project.nbcmobile.data.source.remote.response.Pegawai
+import id.project.nbcmobile.data.source.remote.response.TransaksiItem
 import id.project.nbcmobile.data.source.remote.response.User
 import id.project.nbcmobile.databinding.FragmentProfileCustomerBinding
+import id.project.nbcmobile.view.components.adapter.TransactionHistoryAdapter
 import id.project.nbcmobile.view.components.customView.AlertDialogCustom
 import id.project.nbcmobile.view.components.utils.ViewModelFactory
 

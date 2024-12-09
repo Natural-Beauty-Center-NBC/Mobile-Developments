@@ -86,6 +86,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_produk" />
 
+    <TextView
+        android:id="@+id/error_produks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/rv_produk_guest"
+        app:layout_constraintEnd_toEndOf="@id/rv_produk_guest"
+        app:layout_constraintTop_toTopOf="@id/rv_produk_guest"
+        app:layout_constraintBottom_toBottomOf="@id/rv_produk_guest"
+        android:text="Tidak ada Produk yang tersedia!" />
+
     <LinearLayout
         android:id="@+id/header_perawatan"
         android:layout_width="match_parent"
@@ -121,6 +134,19 @@
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_perawatan" />
+
+    <TextView
+        android:id="@+id/error_perawatans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/rv_perawatan_guest"
+        app:layout_constraintEnd_toEndOf="@id/rv_perawatan_guest"
+        app:layout_constraintTop_toTopOf="@id/rv_perawatan_guest"
+        app:layout_constraintBottom_toBottomOf="@id/rv_perawatan_guest"
+        android:text="Tidak ada Perawatan yang tersedia!" />
 
     <LinearLayout
         android:id="@+id/header_dokter"
@@ -159,4 +185,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_dokter" />
 
+    <TextView
+        android:id="@+id/error_jadwal_dokter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/rv_dokter_guest"
+        app:layout_constraintEnd_toEndOf="@id/rv_dokter_guest"
+        app:layout_constraintTop_toTopOf="@id/rv_dokter_guest"
+        app:layout_constraintBottom_toBottomOf="@id/rv_dokter_guest"
+        android:text="Tidak ada Jadwal Dokter yang tersedia!" />
 </androidx.constraintlayout.widget.ConstraintLayout>
